@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NestStay</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="cart_icon">Giỏ hàng</string>
+    <string name="profile_image">Hồ sơ</string>
+    <string name="title_activity_address_profile">AddressProfileActivity</string>
+
+    <string-array name="gender_options">
+        <item>Khác</item>
+        <item>Nam</item>
+        <item>Nữ</item>
+    </string-array>
+</resources>

@@ -1,0 +1,24 @@
+<!-- res/drawable/rounded_top_corners_with_shadow.xml -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Shadow layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#80000000"/> <!-- Màu của bóng (đen với độ mờ) -->
+            <corners android:topLeftRadius="50dp"
+                android:topRightRadius="50dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+            <padding android:left="0dp" android:top="4dp" android:right="0dp" android:bottom="0dp"/> <!-- Điều chỉnh vị trí bóng -->
+        </shape>
+    </item>
+    <!-- Main background layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#10455B"/>
+            <corners android:topLeftRadius="50dp"
+                android:topRightRadius="50dp"
+                android:bottomLeftRadius="0dp"
+                android:bottomRightRadius="0dp"/>
+        </shape>
+    </item>
+</layer-list>

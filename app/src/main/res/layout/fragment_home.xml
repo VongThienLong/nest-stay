@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+    <!-- Include Custom Top Navigation -->
+    <include
+        android:id="@+id/menu_top_nav"
+        layout="@layout/menu_top_nav"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/ad_background"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/menu_top_nav"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- Previous button -->
+    <ImageView
+        android:id="@+id/previousButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ad_background"
+        android:layout_alignBottom="@id/ad_background"
+        android:layout_alignStart="@id/ad_background"
+        android:src="@drawable/prewhite"
+        android:padding="8dp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+    <!-- Next button -->
+    <ImageView
+        android:id="@+id/nextButton"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/ad_background"
+        android:layout_alignBottom="@id/ad_background"
+        android:layout_alignEnd="@id/ad_background"
+        android:src="@drawable/nextwhite"
+        android:padding="8dp"
+        android:background="?android:attr/selectableItemBackground"/>
+
+
+    <!-- Buttons Layout -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ad_background"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp" >
+
+        <!-- Section 1: Theo dõi -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theo dõi"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="1"
+            android:columnCount="2"
+            android:layout_marginBottom="16dp">
+
+            <!-- Button 1: Lịch sử đơn đặt -->
+            <Button
+                android:id="@+id/historyButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:drawableTop="@drawable/baseline_history_24"
+                android:text="Lịch sử đơn đặt"
+                android:gravity="center"/>
+
+            <!-- Button 2: Cửa hàng -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/button_background"
+                android:drawableTop="@drawable/baseline_store_24"
+                android:text="Cửa hàng"
+                android:gravity="center"/>
+        </GridLayout>
+
+        <!-- Section 2: Thông tin khác -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin khác"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Button 3: Hẹn lấy tại cửa hàng -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_background"
+                    android:drawableTop="@drawable/baseline_edit_location_alt_24"
+                    android:text="Hẹn lấy tại cửa hàng"
+                    android:gravity="center"/>
+
+                <!-- Button 4: Chăm sóc khách hàng -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_background"
+                    android:drawableTop="@drawable/baseline_supervisor_account_24"
+                    android:text="Chăm sóc khách hàng"
+                    android:gravity="center"/>
+
+                <!-- Button 5: Đặt đơn hàng lớn -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_background"
+                    android:drawableTop="@drawable/baseline_business_center_24"
+                    android:text="Đặt đơn hàng lớn"
+                    android:gravity="center"/>
+
+                <!-- Button 6: Tổ chức sinh nhật -->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/button_background"
+                    android:drawableTop="@drawable/baseline_cake_24"
+                    android:text="Tổ chức sinh nhật"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+</RelativeLayout>

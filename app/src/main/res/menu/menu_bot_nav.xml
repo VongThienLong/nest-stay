@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/baseline_home_24"
+            android:title="Trang Chủ" />
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/baseline_menu_book_24"
+            android:title="Đặt Món" />
+        <item
+            android:id="@+id/nav_reservation"
+            android:icon="@drawable/baseline_border_color_24"
+            android:title="Đặt Bàn" />
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/baseline_person_24"
+            android:title="Hồ Sơ" />
+    </group>
+</menu>
